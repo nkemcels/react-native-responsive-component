@@ -1,0 +1,26 @@
+{
+  "name": "react-native-responsive-component",
+  "version": "1.0.0",
+  "description": "A react native A react native library for easily creating responsive components",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nkemcels/react-native-responsive-component.git"
+  },
+  "keywords": [
+    "react-native",
+    "react-native-responsive-component"
+  ],
+  "author": "nkemcels",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nkemcels/react-native-responsive-component/issues"
+  },
+  "homepage": "https://github.com/nkemcels/react-native-responsive-component#readme"
+}
