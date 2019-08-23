@@ -38,12 +38,12 @@ There are currently 3 break points for various screen sizes as shown on the tabl
   </tr>
   <tr>
     <td> Small </td>
-    <td> <= 640px </td>
+    <td> ⩽ 640px </td>
     <td>sm</td>
   </tr>
   <tr>
     <td> Medium </td>
-    <td> > 640px and <= 1007px </td>
+    <td> > 640px and ⩽ 1007px </td>
     <td>md</td>
   </tr>
   <tr>
