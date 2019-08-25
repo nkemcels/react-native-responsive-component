@@ -1,5 +1,7 @@
 ## react-native-responsive-component
+
 ![](intro.jpg)
+
 This react native library provides a way of efficiently and dynamically rendering components based on a device's screen size and/or orientation irrespective of the platform. It achieves this by providing a declarative syntax for applying different values of the same props to different devices based on their current orientation and/or screen size.
 
 ## Installation
