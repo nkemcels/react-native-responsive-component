@@ -214,7 +214,7 @@ The table below shows a list of available functions.
   </tr>
   <tr>
     <td> getDeviceLabel </td>
-    <td> returns the device label i.e. <b>"sm"</b> for small devices, <b>"md"</b> for medium devices </td> and <b>"lg"</b> for large devices
+    <td> returns the device label i.e. <b>"sm"</b> for small devices, <b>"md"</b> for medium devices and <b>"lg"</b> for large devices</td>
   </tr>
   <tr>
     <td> getDeviceSpecificLabel </td>
