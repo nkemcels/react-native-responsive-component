@@ -10,6 +10,10 @@ This react native library provides a way of efficiently and dynamically renderin
 
 **Npm:** `npm install react-native-responsive-component --save`
 
+## Demo
+[Basic Usage - Example 1](https://snack.expo.io/@nkemcels/rnrc-basic-example-1)
+ 
+
 ## Usage
 
 #### Example
