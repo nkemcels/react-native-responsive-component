@@ -239,4 +239,4 @@ The table below shows a list of available functions.
 <table>
 
 ### Contributing
-If you love this library, consider contributing to make it better.
+If you love this library, consider contributing to make it better. Thanks
