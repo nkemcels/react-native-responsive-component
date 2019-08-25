@@ -144,17 +144,17 @@ In the case above, There's a conflict between the two `style` prop when on a med
     <th>Default Value</th>
   </tr>
   <tr>
-    <td> visible$<<prop-command>> </td>
+    <td> visible$&lt;prop-command&gt; </td>
     <td> Displays the component only if the prop command matches for the device and mode</td>
     <td>true</td>
   </tr>
   <tr>
-    <td> visible$<<prop-command>> </td>
+    <td> visible$&lt;prop-command&gt; </td>
     <td> Hides the component only if the prop command matches for the device and mode </td>
     <td>md</td>
   </tr>
   <tr>
-    <td> render$<<prop-command>> </td>
+    <td> render$&lt;prop-command&gt; </td>
     <td> A callback which returns a component to be rendered when the prop command matches </td>
     <td>null</td>
   </tr>
