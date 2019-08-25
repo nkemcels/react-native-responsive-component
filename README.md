@@ -2,7 +2,7 @@
 
 ![](intro.jpg)
 
-This react native library provides a way of efficiently and dynamically rendering components based on a device's screen size and/or orientation irrespective of the platform. It achieves this by providing a declarative syntax for applying different values of the same props to different devices based on their current orientation and/or screen size.
+This react native library provides a way of efficiently and dynamically rendering components based on a device's screen size and/or orientation irrespective of the platform. It achieves this by providing a new declarative syntax for applying different values of the same props to different devices based on their current orientation and/or screen size.
 
 ## Installation
 
@@ -30,7 +30,7 @@ import RComponent from "react-native-responsive-component";
 
 The `RComponent` above will render the `View` component with it's `style` prop set to `{flexDirection:"row", backgroundColor:"red"}` on small devices (**\$sm**), `{flexDirection:"column", justifyContent:"center"}` on medium devices (**\$md-lnd**) with the landscape orientation and `{flex:1, backgroundColor:"blue"}` on large devices with the portrait orientation (**\$lg-ptr**).
 
-There are currently 3 break points for various screen sizes as shown on the table
+There are currently 3 break points for various screen sizes as shown by the table
 
 <table>
   <tr>
@@ -57,7 +57,7 @@ There are currently 3 break points for various screen sizes as shown on the tabl
 
 #### Prop Commands
 
-The prop command is what is used by `RComponent` to determine what prop to apply to the rendered component based on the device.
+The prop command is what is used by `RComponent` to determine what prop to apply to the rendered component based on the device. A prop command always begins with a dollar ($) symbol after the prop name. 
 Here are all the available prop commands that could be used.
 
 <table>
@@ -126,7 +126,7 @@ The above example will apply the `style` prop with `{fontSize:20}` for medium de
 It will equally apply the `style` prop with `{fontSize:25}` for large devices in landscape mode(**\$lg-lnd**), medium devices in both portrait and landscape modes (**\$md**) and small devices in both portrait and landscape modes (**\$sm**).
 For any other case, the `style` prop with `{fontSize:35}` will be applied.
 
-Please note that if two prop commands conflict for the same prop, the prop command that is most specific to the device is applied. e.g
+Please note that if two prop commands conflict for the same prop, the prop command that is most specific to the device is applied. for example;
 
 ```js
 <RComponent
@@ -136,34 +136,32 @@ Please note that if two prop commands conflict for the same prop, the prop comma
 />
 ```
 
-In the case above, There's a conflict between the two `style` prop when on a medium device in portrait mode. In such a scenario, only the `style` prop with `{flex:2}` will be applied because it's prop command (**md-ptr**) is more specific to the device and its current mode.
+In the case above, there's a conflict between the two `style` prop when on a medium device in portrait mode because the `$md` and `$md-ptr` prop commands both matches for this mode. In such a scenario, only the `style` prop with `{flex:2}` will be applied because it's prop command (**$md-ptr**) is more specific to the device and its current mode.
+One last thing to note is that if a prop command is not specified, it always matches (although with the least precedence in case of conflict).
+
 
 ### Other Properties
 <table>
   <tr>
     <th>Prop</th>
     <th>Description</th>
-    <th>Default Value</th>
   </tr>
   <tr>
     <td> visible$&lt;prop-command&gt; </td>
     <td> Displays the component only if the prop command matches for the device and mode</td>
-    <td>true</td>
   </tr>
   <tr>
     <td> visible$&lt;prop-command&gt; </td>
     <td> Hides the component only if the prop command matches for the device and mode </td>
-    <td>md</td>
   </tr>
   <tr>
     <td> render$&lt;prop-command&gt; </td>
     <td> A callback which returns a component to be rendered when the prop command matches </td>
-    <td>null</td>
   </tr>
 <table>
 
 #### More Use cases
-Owing to the frequent use of the `View`, `Text` and `Image` components, react-native-responsive-components also provides precompiled `RView`, `RText` and `RImage` components so that the `render$` methods could be ommited in while using them. for example:
+Owing to the frequent use of the `View`, `Text` and `Image` components, react-native-responsive-components also provides precompiled `RView`, `RText` and `RImage` components so that the `render$` method could be ommited while using them. for example:
 
 ```js
 import {RView, RText} from "react-native-responsive-component";
@@ -175,7 +173,7 @@ import {RView, RText} from "react-native-responsive-component";
    (...)
 </RView>   
 ```
-There are equally helper/utility functions provided by the `RUtil` object of the library. It provides functions that gives more insights to the current device in use. For example.
+There are equally helper/utility functions provided by the `RUtil` object of the library.
 ```js
 import {RUtils} from "react-native-responsive-component";
 ```
@@ -220,7 +218,7 @@ The table below shows a list of available functions.
   </tr>
   <tr>
     <td> getDeviceSpecificLabel </td>
-    <td> returns the device label coupled with the current mode of the device i.e. <b>"sm-ptr"</b> for small devices in portrait mode, <b>"sm-lnd"</b> for small devices in landscape mode, <b>"md-ptr"</b> for medium devices in portrait mode, <b>"md-lnd"</b> for medium devices in landscape mode, <b>"lg-ptr"</b> for large devices in portrait mode and <b>"lg-lnd"</b> for large devices in landscape mode,
+    <td> returns the device label coupled with the current mode of the device i.e. <b>"sm-ptr"</b> for small devices in portrait mode, <b>"sm-lnd"</b> for small devices in landscape mode, <b>"md-ptr"</b> for medium devices in portrait mode, <b>"md-lnd"</b> for medium devices in landscape mode, <b>"lg-ptr"</b> for large devices in portrait mode and <b>"lg-lnd"</b> for large devices in landscape mode,</td>
   </tr>
   <tr>
     <td> getDeviceMode </td>
