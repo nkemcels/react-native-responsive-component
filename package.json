@@ -1,7 +1,7 @@
 {
   "name": "react-native-responsive-component",
-  "version": "1.0.4",
-  "description": "A react native A react native library for easily creating responsive components",
+  "version": "1.0.5",
+  "description": "A react native library that helps you make your components responsive",
   "main": "lib/index.js",
   "directories": {
     "lib": "lib"
