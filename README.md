@@ -186,7 +186,7 @@ import {RUtils} from "react-native-responsive-component";
 if(RUtils.isLandscapeMode()){
   //do something when in landscape mode
 }
-else if (RUtils.isSmallDevice()){
+else if (RUtils.isSmallScreen()){
   //do something for small devices.
 }  
 ```
