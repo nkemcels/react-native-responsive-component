@@ -155,7 +155,7 @@ One last thing to note is that if a prop command is not specified, it always mat
     <td> Displays the component only if the prop command matches for the device and mode</td>
   </tr>
   <tr>
-    <td> visible$&lt;prop-command&gt; </td>
+    <td> hidden$&lt;prop-command&gt; </td>
     <td> Hides the component only if the prop command matches for the device and mode </td>
   </tr>
   <tr>
